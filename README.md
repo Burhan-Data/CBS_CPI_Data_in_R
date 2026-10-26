@@ -1,22 +1,22 @@
 CBS_CPI_Data_in_R
-## Consumer Price Index (CPI) Analysis Pipeline in R
-## Overview
-#This repository contains a self-contained R script that retrieves consumer price data directly from the CBS StatLine API, processes the monthly data 
-#into quarterly averages, calculates quarter-on-quarter percentage changes, plots the results, and archives everything into a local SQLite database.
-## Tooling & Dependencies
-**Language:** R
+## Consumentenprijsindex (CPI) Analyseproces in R
+## Overzicht
+#Dit repository bevat een op zichzelf staand R-script dat consumentenprijsgegevens rechtstreeks ophaalt uit de CBS StatLine API, de maandgegevens verwerkt tot kwartaalgemiddelden,  
+#de procentuele veranderingen van kwartaal op kwartaal berekent, de resultaten plot en alles archiveert in een lokale SQLite-database.
+## Tools en afhankelijkheden
+**Taal:** R
 **Data Wrangling:** `dplyr`, `tidyr`, `stringr`
-**Visualization:** `ggplot2`
+**Visualisatie:** `ggplot2`
 **Database:** `RSQLite`, `DBI`
 
-## Process Architecture
-**Input:** Automatically fetches the latest official CPI table (`86141ENG`) directly from the CBS StatLine web service without manual file downloads.
-**Input2** Check only Food and Non-Alcoholic Beverages (CPI010000) and Health (CPI060000) CPI.
-**Throughput:** Filters user-selected product categories, groups monthly indexes into 3-month blocks to compute the quarterly CPI average, and calculates 
-the percentage growth relative to the preceding quarter.
-**Output:** Generates a publication-ready line chart (`output_cpi_quarterly_change.png`) and writes the clean dataset into a local SQLite database (`cpi_database.sqlite`).
+## Procesarchitectuur
+**Invoer:** Haalt automatisch de nieuwste officiële CPI-tabel (86141ENG) rechtstreeks op via de webservice van CBS StatLine zonder handmatige bestanddownloads.
+**Invoer 2** Controleer uitsluitend de CPI voor Voeding en niet-alcoholische dranken (CPI010000) en Gezondheid (CPI060000).
+**Verwerking:** Filtert de door de gebruiker geselecteerde productcategorieën, groepeert maandelijkse indexen in blokken van 3 maanden om het gemiddelde kwartaal-CPI te berekenen, 
+en berekent de procentuele groei ten opzichte van het voorgaande kwartaal.
+**Uitvoer:** Genereert een publicatieklaar lijndiagram (output_cpi_quarterly_change.png) en schrijft de opgeschoonde dataset weg naar een lokale SQLite-database (cpi_database.sqlite).
 
-## How to Run
-1. Open the project in RStudio.
-2. Run `install.packages(c("cbsodataR", "dplyr", "tidyr", "ggplot2", "DBI", "RSQLite", "stringr", "writexl"))` if packages are missing.
-3. Run the main R script.
+## Hoe te starten
+1. Open het project in RStudio.
+2. Voer install.packages(c("cbsodataR", "dplyr", "tidyr", "ggplot2", "DBI", "RSQLite", "stringr", "writexl")) uit als er pakketten ontbreken..
+3. Voer het hoofd-R-script uit.
