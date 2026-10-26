@@ -1,8 +1,7 @@
 CBS_CPI_Data_in_R
 ## Consumentenprijsindex (CPI) Analyseproces in R
 ## Overzicht
-#Dit repository bevat een op zichzelf staand R-script dat consumentenprijsgegevens rechtstreeks ophaalt uit de CBS StatLine API, de maandgegevens verwerkt tot kwartaalgemiddelden,  
-#de procentuele veranderingen van kwartaal op kwartaal berekent, de resultaten plot en alles archiveert in een lokale SQLite-database.
+#Dit repository bevat een op zichzelf staand R-script dat consumentenprijsgegevens rechtstreeks ophaalt uit de CBS StatLine API, de maandgegevens verwerkt tot kwartaalgemiddelden, de procentuele veranderingen van kwartaal op kwartaal berekent, de resultaten plot en alles archiveert in een lokale SQLite-database.
 ## Tools en afhankelijkheden
 **Taal:** R
 **Data Wrangling:** `dplyr`, `tidyr`, `stringr`
