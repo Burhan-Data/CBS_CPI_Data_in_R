@@ -1,7 +1,7 @@
 CBS_CPI_Data_in_R
 ## Consumentenprijsindex (CPI) Analyseproces in R
 ## Overzicht
-#Dit repository bevat een op zichzelf staand R-script dat consumentenprijsgegevens rechtstreeks ophaalt uit de CBS StatLine API, de maandgegevens verwerkt tot kwartaalgemiddelden, de procentuele veranderingen van kwartaal op kwartaal berekent, de resultaten plot en alles archiveert in een lokale SQLite-database.
+Dit repository bevat een op zichzelf staand R-script dat consumentenprijsgegevens rechtstreeks ophaalt uit de CBS StatLine API, de maandgegevens verwerkt tot kwartaalgemiddelden, de procentuele veranderingen van kwartaal op kwartaal berekent, de resultaten plot en alles archiveert in een lokale SQLite-database.
 ## Tools en afhankelijkheden
 1. **Taal:** R
 2. **Data Wrangling:** `dplyr`, `tidyr`, `stringr`
@@ -16,5 +16,5 @@ CBS_CPI_Data_in_R
 
 ## Hoe te starten
 1. Open het project in RStudio.
-2. Voer install.packages(c("cbsodataR", "dplyr", "tidyr", "ggplot2", "DBI", "RSQLite", "stringr", "writexl")) uit als er pakketten ontbreken..
+2. Voer `install.packages(c("cbsodataR", "dplyr", "tidyr", "ggplot2", "DBI", "RSQLite", "stringr", "writexl"))` uit als er pakketten ontbreken.
 3. Voer het hoofd-R-script uit.
